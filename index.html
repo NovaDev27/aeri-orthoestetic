@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F4C81">
+<meta name="robots" content="noindex">
+<title>OrthoEstetic — Rolândia (versão de demonstração)</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="demo-bar"><b>Versão de demonstração.</b> Amostra grátis de como poderia ficar um site da OrthoEstetic. <b>Não é o site oficial da clínica.</b></div>
+
+<header class="topo">
+  <div class="marca">OrthoEstetic</div>
+  <nav><a href="#atende">O que atendemos</a><a href="#horario">Horário</a><a href="#contato">Contato</a></nav>
+  <a class="btn btn-sm" href="tel:+554332563680">Ligar</a>
+</header>
+
+<main id="site">
+  <section class="hero">
+    <h1>Ortodontia e odontologia na Tiradentes, no Centro de Rolândia</h1>
+    <p>A OrthoEstetic atende na Av. Tiradentes, 891. É uma clínica de aparelho, cuidado do sorriso e odontologia — inclusive para criança. O que cada pessoa precisa, a gente vê na avaliação.</p>
+    <div class="acoes">
+      <a class="btn" href="tel:+554332563680">Ligar para agendar</a>
+      <button class="btn btn-out" data-abrir-aeri>Falar com a Aeri</button>
+    </div>
+    <p class="apoio">(43) 3256-3680 · Av. Tiradentes, 891, Centro</p>
+  </section>
+
+  <section id="atende">
+    <h2>Ortodontia, odontologia e cuidado do sorriso</h2>
+    <p>É uma clínica de ortodontia e odontologia, aqui no Centro de Rolândia. Abaixo está o que a própria clínica menciona em público. Se você busca outra área, vale perguntar na hora de agendar.</p>
+    <div class="cards">
+      <div class="card"><h3>Aparelho e ortodontia</h3><p>Acompanhamento de aparelho e consultas de ortodontia, no tempo que o dentista orientar.</p></div>
+      <div class="card"><h3>Odontologia</h3><p>Consulta e cuidado do dia a dia do sorriso, para quem já usa aparelho e para quem ainda vai avaliar.</p></div>
+      <div class="card"><h3>Saúde bucal infantil</h3><p>Atendimento pensado também para criança, como a clínica anuncia nas listagens.</p></div>
+      <div class="card"><h3>Restauração estética</h3><p>Indicação, limites e o que cabe em cada caso ficam para a avaliação.</p></div>
+    </div>
+    <p class="nota">Outros procedimentos (limpeza, canal, prótese, clareamento etc.) ficam <b>[a confirmar]</b> com a clínica. Esta página não mostra antes e depois e não promete resultado.</p>
+  </section>
+
+  <section id="horario" class="faixa">
+    <h2>Onde fica e quando atende</h2>
+    <p><b>Endereço:</b> Avenida Tiradentes, 891, Centro, Rolândia-PR, CEP 86600-059</p>
+    <p><b>Segunda a sexta:</b> 9h às 12h e 13h às 18h<br><b>Sábado de manhã:</b> [a confirmar — uma fonte indica 8h–12h, outra 9h–12h]<br><b>Domingo:</b> fechado, segundo o perfil público</p>
+    <a class="btn btn-out" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=OrthoEstetic,+Avenida+Tiradentes+891,+Rol%C3%A2ndia+PR">Ver no mapa</a>
+  </section>
+
+  <section id="contato">
+    <h2>Agendar uma avaliação</h2>
+    <p>A Aeri, nossa atendente virtual, monta a mensagem com seu nome, o que você procura e o melhor dia. O horário só fica marcado quando a clínica confirmar.</p>
+    <div class="acoes">
+      <button class="btn" data-abrir-aeri data-fluxo="agendar">Agendar com a Aeri</button>
+      <a class="btn btn-out" href="tel:+554332563680">Ligar (43) 3256-3680</a>
+    </div>
+    <p class="apoio">E-mail: falecom@orthoestetic.com.br [qual e-mail usar no site, a confirmar]</p>
+  </section>
+
+  <footer>
+    <p><b>OrthoEstetic</b> — Clínica de Ortodontia e Odontologia<br>Clínica Odontológica Rolândia Ltda. · CNPJ 14.465.419/0001-23<br>Av. Tiradentes, 891, Centro, Rolândia-PR, CEP 86600-059 · Tel. (43) 3256-3680<br>Responsável técnico: [nome e CRO, a confirmar]</p>
+    <p>Esta página é informativa e não substitui uma consulta odontológica. Não faz diagnóstico nem promete resultado de tratamento.</p>
+    <p><b>Versão de demonstração.</b> Amostra grátis, <b>não é o site oficial da clínica.</b> Nada foi publicado em nome da OrthoEstetic sem autorização.</p>
+  </footer>
+</main>
+
+<!-- ============ Aeri, a atendente 3D ============ -->
+<aside class="aeri" id="aeri" aria-label="Aeri, atendente virtual">
+  <div class="aeri-palco" id="palco">
+    <canvas id="avatar" aria-hidden="true"></canvas>
+    <div class="aeri-2d" id="aeri2d" aria-hidden="true"><div class="cabeca"><i></i><i></i><b></b></div></div>
+    <div class="aeri-carregando" id="carregando">Chamando a Aeri… <span id="pct"></span></div>
+    <div class="aeri-cracha">Aeri · OrthoEstetic</div>
+    <div class="aeri-topo-btns">
+      <button id="btnVoz" title="Ligar/desligar a voz" aria-pressed="false">🔇</button>
+      <button id="btnMin" title="Minimizar">–</button>
+    </div>
+  </div>
+  <div class="aeri-chat" id="chat" role="log" aria-live="polite"></div>
+  <div class="aeri-rapidos" id="rapidos"></div>
+  <form class="aeri-form" id="form"><input id="entrada" placeholder="Escreva sua pergunta…" autocomplete="off" enterkeyhint="send"><button>Enviar</button></form>
+</aside>
+<button class="aeri-lancador" id="lancador" data-abrir-aeri>💬 Falar com a Aeri</button>
+
+<script src="atendente.js"></script>
+
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.min.js",
+  "three/addons/": "./vendor/three/examples/jsm/",
+  "@pixiv/three-vrm": "./vendor/three-vrm.module.min.js"
+} }
+</script>
+<script type="module" src="avatar.js"></script>
+</body>
+</html>
